@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "lollmsClient.h"
+#include "LollmsClient.h"
 
 // Define a struct to represent a chat message
 struct ChatMessage {
