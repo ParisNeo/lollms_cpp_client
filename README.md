@@ -1,4 +1,7 @@
 # LollmsClientLib
+<div align="center">
+  <img src="https://github.com/ParisNeo/lollms/blob/main/lollms/assets/logo.png" alt="Logo" width="200" height="200">
+</div>
 
 [![GitHub license](https://img.shields.io/github/license/ParisNeo/lollms_cpp_client)](https://github.com/ParisNeo/lollms_cpp_client/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ParisNeo/lollms_cpp_client)](https://github.com/ParisNeo/lollms_cpp_client/stargazers)
