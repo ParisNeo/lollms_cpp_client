@@ -1,4 +1,4 @@
-#include <lollmsClient.h>
+#include <LollmsClient.h>
 
 using namespace sio;
 
