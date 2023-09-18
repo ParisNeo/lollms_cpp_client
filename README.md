@@ -31,7 +31,7 @@ To use the LollmsClientLib library, follow these steps:
 2. Build and install the `socket.io-client-cpp` dependency:
 
    ```shell
-   cd LollmsClientLib
+   cd lollms_cpp_client
    mkdir build && cd build
    cmake ..
    make
@@ -49,8 +49,9 @@ Here's a detailed example of how to use the LollmsClientLib library in your C++ 
 #include "lollmsClient.h"
 
 int main() {
+    // Start a lollms server (default address is localhost:9601)
     // Initialize the Lollms client with the server URL
-    lollmsClient client("https://lollms-server-url.com");
+    lollmsClient client("https://localhost:9601");
 
     // Set up event handlers
     client.onConnected([]() {
@@ -64,9 +65,6 @@ int main() {
     // Connect to the server
     client.getClient().connect();
 
-    // Generate text
-    client.generateText("Once upon a time, in a land far, far away...", 5);
-
     // Handle text chunk received
     client.onChunkReceived([](std::string chunk) {
         std::cout << "Received text chunk: " << chunk << std::endl;
@@ -76,6 +74,9 @@ int main() {
     client.onFullTextReceived([](std::string text) {
         std::cout << "Received full generated text: " << text << std::endl;
     });
+
+    // Generate text
+    client.generateText("Once upon a time, in a land far, far away", 128);
 
     // Wait for user input to cancel text generation
     std::cout << "Press Enter to cancel text generation..." << std::endl;
